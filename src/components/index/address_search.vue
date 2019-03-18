@@ -4,22 +4,23 @@
 * @Description: 定位+搜索组件
 -->
 <template>
-<div class="container">
+<div class="address_search">
     <!-- 定位 -->
     <div class="address">
-       <i class="iconfont icon-weizhi"></i>
+       <i class="iconfont icon-weizhi"></i>{{city}}
     </div>
     <!-- 搜索 -->
     <div class="search">
         <i class="iconfont icon-suosou"></i>
         <input class="inputContent" type="text" placeholder="输入搜索">
+        <!-- <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button> -->
     </div>
 </div>
 </template>
 
 <script>
 // var QQMapWX = require('../libs/qqmap-wx-jssdk.min.js')
-import QQMapWX from '../libs/qqmap-wx-jssdk.min.js'
+import QQMapWX from '../..//libs/qqmap-wx-jssdk.min.js'
 export default {
 
   data () {
@@ -29,6 +30,10 @@ export default {
     }
   },
   mounted () {
+    this.getUserLocation()
+    this.qqmapsdk = new QQMapWX({
+      key: 'AX2BZ-NYICF-OLRJ5-N5JTT-4QZUK-Q5F7G' // 这里自己的key秘钥进行填充
+    })
     // this.getUserLocation()
     // console.log(this.city)
   },
@@ -43,7 +48,6 @@ export default {
           // res.authSetting['scope.userLocation'] == undefined    表示 初始化进入该页面
           // res.authSetting['scope.userLocation'] == false    表示 非初始化进入该页面,且未授权
           // res.authSetting['scope.userLocation'] == true    表示 地理位置授权
-          debugger
           if (res.authSetting['scope.userLocation'] !== undefined && res.authSetting['scope.userLocation'] !== true) {
             wx.showModal({
               title: '请求授权当前位置',
@@ -87,7 +91,11 @@ export default {
           }
         },
         fail: (res) => {
-          debugger
+          wx.showToast({
+            title: '授权失败',
+            icon: 'none',
+            duration: 1000
+          })
         }
       })
     },
@@ -97,7 +105,6 @@ export default {
       wx.getLocation({
         type: 'wgs84',
         success: function (res) {
-          console.log(JSON.stringify(res))
           var latitude = res.latitude
           var longitude = res.longitude
           vm.getLocal(latitude, longitude)
@@ -116,8 +123,6 @@ export default {
           longitude: longitude
         },
         success: function (res) {
-          console.log(JSON.stringify(res))
-          // let province = res.result.ad_info.province
           let city = res.result.ad_info.city
           vm.city = city
         },
@@ -132,46 +137,54 @@ export default {
   },
   components: {},
   onLoad () {
-    this.qqmapsdk = new QQMapWX({
-      key: 'AX2BZ-NYICF-OLRJ5-N5JTT-4QZUK-Q5F7G' // 这里自己的key秘钥进行填充
-    })
-    console.log(this.qqmapsdk)
+
+    // console.log(this.qqmapsdk)
   },
   onShow () {
-    this.getUserLocation()
-    debugger
+
     // console.log(this.city)
   }
 }
 </script>
 <style lang="less" scoped>
-.container{
+.address_search{
   padding: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 30rpx;
+  color: #928E8D;
+  //定位
   .address{
       width: 170rpx;
       border-radius: 8rpx;
-      padding: 20rpx;
+      height: 80rpx;
+      line-height: 80rpx;
       box-sizing: border-box;
       text-align: center;
-      background-color: #F1F1EF
+      background-color: #F1F1EF;
+      display: flex;
+      flex-direction: row;
+      justify-content: center
   }
+  // 搜索框
   .search{
       width: 520rpx;
       border-radius: 8rpx;
-      padding: 20rpx;
+      height: 80rpx;
+      line-height: 80rpx;
       box-sizing: border-box;
       border: 1px solid #CCC8C7;
       display: flex;
       flex-direction: row;
       .icon-suosou{
-        font-size: 50rpx
+        font-size: 50rpx;
+        margin-left: 20rpx;
       }
       .inputContent{
-        margin-left: 20rpx
+        margin-left: 20rpx;
+        height: 100%;
       }
   }
 

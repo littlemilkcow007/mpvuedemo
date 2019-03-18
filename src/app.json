@@ -6,7 +6,7 @@
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "您的位置信息将用于获取周围商家信息"
+      "desc": "您的位置信息将用于获取附近商家信息"
     }
   },
   "window": {

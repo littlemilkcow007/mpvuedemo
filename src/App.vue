@@ -23,7 +23,9 @@ export default {
         if (res.code) {
           // 发起网络请求
           http.postReq(urls.LOGIN, {code: res.code}, (data) => {
-            console.log(data)
+            if (data.isOk) {
+              wx.setStorageSync('token', data.token)
+            }
           })
         } else {
           console.log('登录失败！' + res.errMsg)

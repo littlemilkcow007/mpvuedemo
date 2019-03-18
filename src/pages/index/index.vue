@@ -1,48 +1,46 @@
 <template>
-<!--   <div class="container" @click="clickHandle('test click', $event)">
-
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
-    </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-  </div> -->
-  <div class="container">
-    <addressSearch/>
-    <!-- 轮播图 -->
-    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
-        <block v-for="(item, index) in images" :key="index">
-            <swiper-item>
-              <image :src="item.url" class="slide-image" mode="aspectFill"/>
-            </swiper-item>
-        </block>
-    </swiper>
+  <div class="index">
+      <!-- 当前位置定位+搜索 -->
+      <addressSearch />
+      <!-- 轮播图 -->
+      <swiper :imgUrl='imgUrl'/>
+      <!-- 优惠券 -->
+      <coupons />
+      <!-- 快速通道 -->
+      <fastTrack />
+      <!-- 品牌馆 -->
+      <brand />
+      <!-- 人群推荐 -->
+      <crowdRecommended />
   </div>
 </template>
 
 <script>
-import addressSearch from '../../components/address_search'
+import addressSearch from '@Components/index/address_search'
+import swiper from '@Components/index/swiper'
+import coupons from '@Components/index/coupons'
+import fastTrack from '@Components/index/fast_track'
+import brand from '@Components/index/brand'
+import crowdRecommended from '@Components/index/crowd_recommended'
+
 export default {
   data () {
     return {
-      images: []
+      imgUrl: [
+        '../../static/images/1.jpg',
+        '../../static/images/2.jpg',
+        '../../static/images/3.jpg',
+        '../../static/images/4.jpg'
+      ]
     }
   },
   components: {
-    addressSearch
+    addressSearch,
+    swiper,
+    coupons,
+    fastTrack,
+    brand,
+    crowdRecommended
   },
   methods: {
 

@@ -25,6 +25,10 @@ function getEntry (rootSrc) {
    return map;
 }
 
+//设置变量
+var ROOT_PATH = path.resolve(__dirname,'../');
+var SRC_PATH = path.resolve(ROOT_PATH,'src');
+
 const appEntry = { app: resolve('./src/main.js') }
 const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
 const entry = Object.assign({}, appEntry, pagesEntry)
@@ -47,7 +51,12 @@ let baseWebpackConfig = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue': 'mpvue',
-      '@': resolve('src')
+      '@Static': path.resolve(ROOT_PATH,'static'),
+      '@Src': SRC_PATH,
+      '@Pages':path.join(SRC_PATH, 'pages'),
+      '@Utils':path.join(SRC_PATH, 'utils'),
+      '@Components':path.join(SRC_PATH, 'components'),
+      '@Store':path.join(SRC_PATH, 'store'),
     },
     symlinks: false,
     aliasFields: ['mpvue', 'weapp', 'browser'],
