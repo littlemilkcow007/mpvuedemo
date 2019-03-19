@@ -21,8 +21,8 @@ export default {
         {url: '../../../static/images/hotSell.png', name: '热卖'},
         {url: '../../../static/images/all.png', name: '全部'}
       ],
-      width: '80rpx',
-      height: '80rpx'
+      width: '60rpx',
+      height: '60rpx'
     }
   },
   mounted () {
@@ -42,6 +42,6 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20rpx;
+    padding: 20rpx 40rpx;
 }
 </style>

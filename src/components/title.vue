@@ -6,13 +6,14 @@
 
  <template>
 <div class="title">
-    <p>人群推荐</p>
-    <p class="subTitle">Target Recommended</p>
+    <p>{{ title }}</p>
+    <p class="subTitle">{{ subTitle }}</p>
 </div>
 </template>
 
 <script>
  export default {
+   props: ['title', 'subTitle'],
    data () {
      return {
 
@@ -34,7 +35,8 @@
         flex-direction: column;
         justify-content: center;
         padding: 10rpx 0;
-        margin-top: 20rpx;
+        margin-top: 40rpx;
+        margin-bottom:20rpx;
         p{
             text-align: center;
             font-size:30rpx;

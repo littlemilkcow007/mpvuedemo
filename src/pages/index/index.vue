@@ -12,16 +12,22 @@
       <brand />
       <!-- 人群推荐 -->
       <crowdRecommended />
+      <!-- 口味推荐 -->
+      <tasteRecommend />
+      <!-- 热卖精选 -->
+      <selectedSell />
   </div>
 </template>
 
 <script>
-import addressSearch from '@Components/index/address_search'
+import addressSearch from '@Components/address_search'
 import swiper from '@Components/index/swiper'
 import coupons from '@Components/index/coupons'
 import fastTrack from '@Components/index/fast_track'
 import brand from '@Components/index/brand'
 import crowdRecommended from '@Components/index/crowd_recommended'
+import tasteRecommend from '@Components/index/taste_recommend'
+import selectedSell from '@Components/index/selected_sell'
 
 export default {
   data () {
@@ -40,7 +46,9 @@ export default {
     coupons,
     fastTrack,
     brand,
-    crowdRecommended
+    crowdRecommended,
+    tasteRecommend,
+    selectedSell
   },
   methods: {
 

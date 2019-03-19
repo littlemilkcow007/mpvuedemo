@@ -20,7 +20,7 @@
 
 <script>
 // var QQMapWX = require('../libs/qqmap-wx-jssdk.min.js')
-import QQMapWX from '../..//libs/qqmap-wx-jssdk.min.js'
+import QQMapWX from '../libs/qqmap-wx-jssdk.min.js'
 export default {
 
   data () {

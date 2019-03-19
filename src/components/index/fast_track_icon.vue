@@ -8,12 +8,16 @@
 <div class="fast_track_icon">
     <image :src='imgUrl' :style="{width,height}"/>
     <p v-if="name" class="name">{{ name }}</p>
+    <div v-if="title" class="title">
+      <p class='content'>{{ title }}</p>
+      <p class='subtitle'>{{ subtitle }}</p>
+    </div>
 </div>
 </template>
 
 <script>
  export default {
-   props: ['imgUrl', 'name', 'width', 'height'],
+   props: ['imgUrl', 'name', 'width', 'height', 'title', 'subtitle'],
    data () {
      return {
      }
@@ -31,14 +35,29 @@
     .fast_track_icon{
       display: flex;
       flex-direction: column;
-      padding: 20rpx;
       text-align: center;
+      position: relative;
       image{
         align-self: center;
       }
       .name{
         font-size: 30rpx;
         text-align: center
+      }
+      //主题
+      .title{
+        position: absolute;
+        right: 20rpx;
+        top: 10rpx;
+        font-size:24rpx;
+        color:#464646;
+        // font-weight:bold;
+        .content{
+          text-align:right
+        }
+        .subtitle{
+          text-align:left
+        }
       }
     }
 </style>
