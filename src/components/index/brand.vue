@@ -29,10 +29,14 @@ export default {
   data () {
     return {
       imagesUrl: [
-        {url: '../../../static/images/xingfuxibing.jpg'},
-        {url: '../../../static/images/haolilai.png'},
-        {url: '../../../static/images/andeluseng.jpg'},
-        {url: '../../../static/images/aidale.jpg'}
+        {url: '/static/images/xingfuxibing.jpg'},
+        {url: '/static/images/haolilai.png'},
+        {url: '/static/images/andeluseng.jpg'},
+        {url: '/static/images/aidale.jpg'}
+        // {url: '../../../static/images/xingfuxibing.jpg'},
+        // {url: '../../../static/images/haolilai.png'},
+        // {url: '../../../static/images/andeluseng.jpg'},
+        // {url: '../../../static/images/aidale.jpg'}
       ],
       width: '140rpx',
       height: '80rpx'

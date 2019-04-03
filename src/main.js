@@ -8,3 +8,4 @@ Vue.prototype.$store = store // 全局注册store
 
 const app = new Vue(App)
 app.$mount()
+// Vue.prototype.globalData = getApp().globalData // 注册全局变量

@@ -33,7 +33,7 @@
    components: {}
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   .goods{
     font-size: 24rpx;
     display: flex;
@@ -55,6 +55,9 @@
       }
       .nameBox{
         margin-top: 10rpx;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .price{
         color:#E84A3F

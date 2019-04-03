@@ -24,15 +24,15 @@ export default {
       title: '口味推荐',
       subTitle: 'Flavor Recommended',
       imagesUrl: [
-        {url: '../../../static/images/ruzhi.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/musi.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/shuiguo.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/pinda.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/zhishi.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/qiaokeli.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/binqilin.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/napolun.png', width: '100%', height: '240rpx'},
-        {url: '../../../static/images/ganguo.png', width: '100%', height: '240rpx'}
+        {url: '/static/images/ruzhi.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/musi.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/shuiguo.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/pinda.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/zhishi.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/qiaokeli.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/binqilin.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/napolun.png', width: '100%', height: '240rpx'},
+        {url: '/static/images/ganguo.png', width: '100%', height: '240rpx'}
       ]
     }
   },

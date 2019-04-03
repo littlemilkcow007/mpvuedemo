@@ -25,11 +25,14 @@ export default {
   data () {
     return {
       imagesUrl1: [
-        {url: '../../../static/images/cake1.jpg', title: '送爱人', subtitle: 'Beloved ones', width: '100%', height: '340rpx'}
+        {url: '/static/images/cake1.jpg', title: '送爱人', subtitle: 'Beloved ones', width: '100%', height: '340rpx'}
+        // {url: '../../../static/images/cake1.jpg', title: '送爱人', subtitle: 'Beloved ones', width: '100%', height: '340rpx'}
       ],
       imagesUrl2: [
-        {url: '../../../static/images/cake2.jpg', title: '送长辈', subtitle: 'The elderly', width: '100%', height: '170rpx'},
-        {url: '../../../static/images/cake3.jpg', title: '送小朋友', subtitle: 'For kids', width: '100%', height: '170rpx'}
+        {url: '/static/images/cake2.jpg', title: '送长辈', subtitle: 'The elderly', width: '100%', height: '170rpx'},
+        {url: '/static/images/cake3.jpg', title: '送小朋友', subtitle: 'For kids', width: '100%', height: '170rpx'}
+        // {url: '../../../static/images/cake2.jpg', title: '送长辈', subtitle: 'The elderly', width: '100%', height: '170rpx'},
+        // {url: '../../../static/images/cake3.jpg', title: '送小朋友', subtitle: 'For kids', width: '100%', height: '170rpx'}
       ],
       title: '人群推荐',
       subTitle: 'Target Recommended'

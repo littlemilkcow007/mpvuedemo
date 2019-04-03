@@ -14,7 +14,8 @@
  export default {
    data () {
      return {
-       imgUrl: '../../../static/images/youhuiquan.png'
+       imgUrl: '/static/images/youhuiquan.png'
+       //  imgUrl: '../../../static/images/youhuiquan.png'
      }
    },
    mounted () {

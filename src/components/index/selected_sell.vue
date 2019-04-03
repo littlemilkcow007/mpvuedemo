@@ -23,12 +23,18 @@ export default {
     return {
       title: '-热卖精选-',
       goodsList: [
-        {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
-        {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
-        {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
-        {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
-        {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
-        {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'}
+        {url: '/static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        {url: '/static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        {url: '/static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        {url: '/static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        {url: '/static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        {url: '/static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'}
+        // {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        // {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        // {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        // {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        // {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'},
+        // {url: '../../../static/images/goods.jpg', name: '莱茵河莓妖精Blue', brandName: '诺心LEcake', price: '288'}
       ]
     }
   },

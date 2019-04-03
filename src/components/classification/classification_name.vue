@@ -6,7 +6,7 @@
 
  <template>
 <div class="classification_name">
-    <p :class={name:true,active:true} v-for="(item,index) in classification" :key="index">{{ item.name }}</p>
+    <p :class="{name:true,active:currentIndex===index}" v-for="(item,index) in classification" :key="index" @click="changeType(index)">{{ item.name }}</p>
 </div>
 </template>
 
@@ -15,6 +15,7 @@
    props: ['classification'],
    data () {
      return {
+       currentIndex: 0
      }
    },
    mounted () {
@@ -22,23 +23,26 @@
    },
    computed: {},
    methods: {
-
+     changeType (index) {
+       this.currentIndex = index
+       this.$emit('ChangecurrentIndex', this.currentIndex)
+     }
    },
    components: {}
 }
 </script>
 <style lang="less" scoped>
  .classification_name{
-   border-right: 1px solid #F2F2F2;
-   box-sizing: border-box;
    width: 180rpx;
    height: 100%;
    .name{
      line-height: 100rpx;
      text-align: center;
+     border-left: 4rpx solid #fff;
    }
    .active{
-     border-left: 6rpx solid #FF393A;
+     border-left-color: #FF393A;
+     box-sizing: border-box
    }
  }
 </style>

@@ -1,6 +1,6 @@
 <script>
 // import 'static/css/iconfont.css'
-import urls from './utils/http/requestConfig'
+import {urls} from './utils/http/requestConfig'
 import http from './utils/http/requestRegister'
 export default {
   created () {
@@ -18,6 +18,7 @@ export default {
     }
   },
   onLaunch () {
+    var that = this
     wx.login({
       success: function (res) {
         if (res.code) {
@@ -28,8 +29,21 @@ export default {
             }
           })
         } else {
-          console.log('登录失败！' + res.errMsg)
+          wx.showToast({
+            title: res.errMsg,
+            icon: 'warn',
+            duration: 2000
+          })
         }
+      }
+    })
+    wx.getSystemInfo({
+      success (res) {
+        that.$mp.app.globalData.screen = {
+          screenWidth: res.screenWidth,
+          screenHeight: res.screenHeight
+        }
+        console.log(that.$mp.app.globalData)
       }
     })
   }
@@ -38,20 +52,4 @@ export default {
 
 <style>
 @import './libs/iconfont.css';
-/* .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-}
-/* this rule will be remove */
-/* * {
-  transition: width 2s;
-  -moz-transition: width 2s;
-  -webkit-transition: width 2s;
-  -o-transition: width 2s;
-}  */
 </style>

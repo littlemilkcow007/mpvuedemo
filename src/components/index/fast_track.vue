@@ -16,10 +16,14 @@ export default {
   data () {
     return {
       imagesUrl: [
-        {url: '../../../static/images/creative.png', name: '创意网红'},
-        {url: '../../../static/images/theDay.png', name: '当日达'},
-        {url: '../../../static/images/hotSell.png', name: '热卖'},
-        {url: '../../../static/images/all.png', name: '全部'}
+        {url: '/static/images/creative.png', name: '创意网红'},
+        {url: '/static/images/theDay.png', name: '当日达'},
+        {url: '/static/images/hotSell.png', name: '热卖'},
+        {url: '/static/images/all.png', name: '全部'}
+        // {url: '../../../static/images/creative.png', name: '创意网红'},
+        // {url: '../../../static/images/theDay.png', name: '当日达'},
+        // {url: '../../../static/images/hotSell.png', name: '热卖'},
+        // {url: '../../../static/images/all.png', name: '全部'}
       ],
       width: '60rpx',
       height: '60rpx'

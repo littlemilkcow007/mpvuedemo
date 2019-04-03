@@ -4,10 +4,12 @@
     <addressSearch />
     <div class="classificationBox">
       <!-- 分类名称 -->
-      <classificationName :classification='classification' />
+      <classificationName :classification='classification' @ChangecurrentIndex='ChangecurrentIndex'/>
       <!-- 分类商品 -->
-      <div class="classificationList" v-for="(item,index) in classification" :key="index">
-        <classification :classificationItem='item' v-if='currentIndex===index'/>
+      <div class="classification_flex">
+        <div class="classificationList" v-for="(item,index) in classification" :key="index">
+          <classification :classificationItem='item' v-if='currentIndex===index'/>
+        </div>
       </div>
     </div>
   </div>
@@ -32,7 +34,9 @@ export default {
   computed: {
   },
   methods: {
-
+    ChangecurrentIndex (index) {
+      this.currentIndex = index
+    }
   },
   components: {
     addressSearch,
@@ -49,9 +53,13 @@ export default {
       display: flex;
       flex-direction: row;
       border-top: 1px solid #F2F2F2;
-      .classificationList{
-        display: flex;
-        justify-content: center
+      .classification_flex{
+        flex: 1;
+          border-left: 1px solid #F2F2F2;
+          box-sizing: border-box;
+        .classificationList{
+        }
+
       }
     }
   }
